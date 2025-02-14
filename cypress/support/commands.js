@@ -26,12 +26,13 @@
 
 
 Cypress.Commands.add('loginToTrello', () => {
+    cy.intercept("https://trello.com/1/resources/templates/categories").as("categories")
     cy.visit("/login")
     cy.get("#username").type("s12112896@stu.najah.edu")
     cy.get("#login-submit").click()
     cy.get("#password").type(".CfGMMvQ4dDQ7+A")
     cy.contains(".css-178ag6o" ,"Log in").click()
-    cy.wait(4000)
+    cy.wait("@categories")
 })
 
 Cypress.Commands.add('findByTestId',(testId)=>{

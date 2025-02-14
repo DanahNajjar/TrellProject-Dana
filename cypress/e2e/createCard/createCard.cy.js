@@ -42,5 +42,6 @@ Then("The card will created successfully",()=>{
 })
 
 after(()=>{
+    cy.wait(3000)
     dataUtil.deleteBoard(boardId)
 })
