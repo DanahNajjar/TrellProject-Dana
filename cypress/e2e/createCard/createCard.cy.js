@@ -37,7 +37,7 @@ When("Click on Add card buttton",()=>{
     createCardAction.ClickonAddcardbuttton()
 })
 
-Then("The card will created successfully",(cardName)=>{
+Then("The card will created successfully",()=>{
     createCardAssertion.checkListIsContainCard(cardName)
 })
 

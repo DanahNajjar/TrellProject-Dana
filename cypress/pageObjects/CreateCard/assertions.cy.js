@@ -1,6 +1,6 @@
 class createCardAssertions{
-    checkListIsContainCard(cardName){
-        cy.findByTestId("card-name").should("contain",cardName)
+    checkListIsContainCard(){
+        cy.findByTestId("card-name").should("contain","My First Card")
         return this ; 
     }
 }
