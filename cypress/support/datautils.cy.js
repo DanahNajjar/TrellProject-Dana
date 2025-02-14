@@ -9,5 +9,10 @@ class dataUtils{
         return cy.request("DELETE",`https://api.trello.com/1/boards/${boardId}?key=${APIKey}&token=${APIToken}`)
 
     }
+
+    createCard = (idList) =>{
+        return cy.request("POST" , `https://api.trello.com/1/cards?${idList}=5abbe4b7ddc1b351ef961414&key=${APIKey}&token=${APIToken}`)
+    }
+   
 }
 export default dataUtils;
