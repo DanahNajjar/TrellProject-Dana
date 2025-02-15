@@ -1,3 +1,4 @@
+@smokeTest
 Feature: Delete Card in Trello Website 
 Scenario: Validate That The User Can Delete Existing Card 
 Given The user navigate to the board

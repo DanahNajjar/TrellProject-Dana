@@ -1,7 +1,7 @@
-class deleteCardAssertions{
-    checkCardNameIsDeleted(){
-        cy.findByTestId("card-name").should("be.empty")
-        return this ; 
+class deleteCardAssertions {
+    checkCardIsDeleted(cardName) {
+        cy.contains(cardName).should('not.exist');
+        return this;
     }
 }
-export default deleteCardAssertions
+export default deleteCardAssertions;

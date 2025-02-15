@@ -4,7 +4,7 @@ class deleteCardActions{
         return this;
      }
      clickOnExistingCard(){
-        cy.findByTestId("quick-card-editor-card-title").click()
+        cy.findByTestId("card-done-state").click()
      }
      
      clickOnArchiveButton(){
@@ -16,8 +16,9 @@ class deleteCardActions{
     }
     
     clickOnDeleteCardPopScreen(){
-        cy.findByTestId(" popover-confirm-button").click()
+        cy.findByTestId("popover-confirm-button").click()
 }
 
 }
 export default deleteCardActions
+
