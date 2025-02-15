@@ -14,26 +14,25 @@ const deleteCardAssertion = new deleteCardAssertions();
 
 before(() => {
     dataUtil.createBoard(boardName)
-        .then((response) => {
-            cy.log(response.body.url);
-            boardUrl = response.body.url;
-            boardId = response.body.id;
+    .then((response) => {
+    cy.log(response.body.url);
+    boardUrl = response.body.url;
+    boardId = response.body.id;
 
-            dataUtil.getListsOnBoard(boardId)
-                .then((response) => {
-                    cy.log(response.body);
-                    idList = response.body[0].id;  // Correct way to access the first list Id
-                    cy.log(idList);
+    dataUtil.getListsOnBoard(boardId)
+    .then((response) => {
+    cy.log(response.body);
+    idList = response.body[0].id;  // Correct way to access the first list Id
+    cy.log(idList);
 
-                    dataUtil.createCard(idList, "My First Card")
-                        .then((response) => {
-                            cy.log(response.body.id);  
-                        });
-                });
-        });
+    dataUtil.createCard(idList, "My First Card")
+    .then((response) => {
+    cy.log(response.body.id);});
+    });
+    });
 
     cy.loginToTrello();
-});
+    });
 
 Given("The user navigate to the board",()=>{
     deleteCardAction.openBoard(boardUrl)
