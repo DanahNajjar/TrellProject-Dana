@@ -1,16 +1,15 @@
 ///reference types = "cypress" /›
 import { Given,When,Then } from "cypress-cucumber-preprocessor/steps";
+import cardTemplateActions from "../../pageObjects/CardTemplate/actions.cy";
+import cardTemplateAssertions from "../../pageObjects/CardTemplate/assertions.cy";
 import dataUtils from "../../support/dataUtils.cy";
-import deleteCardActions from "../../pageObjects/DeleteCard/actions.cy";
-import deleteCardAssertions from "../../pageObjects/DeleteCard/assertions.cy";
 
 const boardName = "R3-board";
 const cardName = "My First Card"
-let boardUrl , boardId ,idList; 
+let boardUrl , boardId ,idList  
+const cardTemplateAction = new cardTemplateActions();
+const cardTemplateAssertion = new cardTemplateAssertions();
 const dataUtil = new dataUtils();
-const deleteCardAction = new deleteCardActions();
-const deleteCardAssertion = new deleteCardAssertions();
-
 
 before(() => {
     dataUtil.createBoard(boardName)
@@ -36,31 +35,19 @@ before(() => {
 });
 
 Given("The user navigate to the board",()=>{
-    deleteCardAction.openBoard(boardUrl)
+    cardTemplateAction.openBoard(boardUrl)
 
 })
-
 When("Click on existing card",()=>{
-    deleteCardAction.clickOnExistingCard()
-
+    cardTemplateAction.clickOnExistingCard()
 })
 
-When("Click on Archive button",()=>{
-    deleteCardAction.clickOnArchiveButton()
-
+When("Click on Make a template button",()=>{
+    cardTemplateAction.makeaTemplateButton()
 })
 
-When("Click on Delete button",()=>{
-    deleteCardAction.clickOnDeleteButton()
-
-})
-
-When("Click on the word Delete button of Delete card pop-screen",()=>{
-    deleteCardAction.clickOnDeleteCardPopScreen()
-})
-
-Then("The card deleted successfully",()=>{
-    deleteCardAssertion.checkCardIsDeleted(cardName)
+Then("The New Card Template created successfully",()=>{
+    cardTemplateAssertion.cardTemplateSuccessfullyCreated()
 })
 
 after(()=>{
