@@ -47,10 +47,6 @@ When("The user types a new name for the card", () => {
   updateTemplateNameAction.newCardName(newCardName); 
 });
 
-When("The user clicks on the Close Icon button", () => {
-  updateTemplateNameAction.clickOnCloseIconButton();
-});
-
 Then("The card template name is updated successfully", () => {
   updateTemplateNameAssertion.cardTemplateNameUpdatedSuccessfully(newCardName); 
 });

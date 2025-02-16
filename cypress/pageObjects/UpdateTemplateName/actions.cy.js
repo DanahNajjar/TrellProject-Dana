@@ -16,9 +16,6 @@ class updateTemplateNameActions {
       cy.findByTestId("card-back-title-input").clear().type(cardName); // Use the passed card name variable
     }
   
-    clickOnCloseIconButton() {
-      cy.findByTestId("CloseIcon").click(); // Ensure the correct selector is used
-    }
   }
   
   export default updateTemplateNameActions;
