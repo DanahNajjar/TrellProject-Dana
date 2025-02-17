@@ -1,3 +1,4 @@
+@regressionTest
 Feature: Move Template To Any List
 Scenario: Validate That The User Can Move Card Template To Any List
 Given The user navigates to the board
