@@ -15,7 +15,7 @@ class moveTemplateToAnyListActions {
 
   typesDoingInListInputField() {
     cy.wait(3000);
-    cy.get("#react-select-3-input").clear().type("Doing").type('{enter}');
+    cy.get("react-select-3-input").clear().type("Doing").type('{enter}');
 
 }
 
