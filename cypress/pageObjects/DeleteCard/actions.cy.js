@@ -4,6 +4,7 @@ class deleteCardActions{
         return this;
      }
      clickOnExistingCard(){
+      cy.wait(3000)
         cy.findByTestId("card-done-state").click()
      }
      

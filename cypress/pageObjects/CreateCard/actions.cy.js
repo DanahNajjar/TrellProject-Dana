@@ -4,6 +4,7 @@ class createCardActions{
        return this;
     }
     clickOnAddACardButton(){
+        cy.wait(3000)
         cy.findByTestId("list-add-card-button").first().click()
         return this;
     }

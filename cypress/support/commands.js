@@ -39,4 +39,3 @@ Cypress.Commands.add('findByTestId',(testId)=>{
      cy.get(`[data-testid=${testId}]`);
 
 })
-
