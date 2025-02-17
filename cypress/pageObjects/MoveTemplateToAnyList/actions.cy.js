@@ -15,7 +15,8 @@ class moveTemplateToAnyListActions {
 
   typesDoingInListInputField(newTemplatePosition) {
     cy.wait(3000);
-    cy.findByTestId("move-card-popover-select-list-destination").click().type(newTemplatePosition);
+    cy.findByTestId("move-card-popover-select-list-destination").click().type(newTemplatePosition +'{downArrow}'+'{enter}');
+    cy.wait(3000);
 }
 
   confirmMoveButton() {
