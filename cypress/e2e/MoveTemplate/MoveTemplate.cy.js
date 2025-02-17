@@ -6,7 +6,7 @@ import moveTemplateToAnyListAssertions from "../../pageObjects/MoveTemplateToAny
 
 const boardName = "R3-board";
 const cardTemplateName = "My Card Template";
-const newTemplatePosition = "Doing";
+const newTemplatePosition = "Done";
 let boardUrl, boardId, idList, cardId;
 const dataUtil = new dataUtils();
 const moveTemplateToAnyListAction = new moveTemplateToAnyListActions();
@@ -43,7 +43,7 @@ When("The user clicks on Move button", () => {
 });
 
 When("The user clicks on List and types Doing in the list input field", () => {
-  moveTemplateToAnyListAction.typesDoingInListInputField();
+  moveTemplateToAnyListAction.typesDoingInListInputField(newTemplatePosition);
 });
 
 When("The user clicks on Move button", () => {

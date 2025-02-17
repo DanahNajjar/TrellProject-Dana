@@ -1,13 +1,14 @@
 class updateTemplateNameActions {
-  openBoard(boardUrl) {
-    cy.visit(boardUrl);
-    return this;
-  }
-
-  clickOnExistingCard() {
+  openBoard(boardUrl){
+    cy.visit(boardUrl)
     cy.wait(3000)
-    cy.findByTestId("card-done-state").click();
-  }
+    cy.screenshot({capture:"fullPage"})
+    return this;
+ }
+ clickOnExistingCard(){
+  cy.wait(3000)
+    cy.findByTestId("card-done-state").click()
+ }
 
   clickOnCardTitle() {
     cy.findByTestId("card-back-title-input").click(); 

@@ -13,10 +13,9 @@ class moveTemplateToAnyListActions {
     cy.findByTestId("card-back-move-card-button").click();
   }
 
-  typesDoingInListInputField() {
+  typesDoingInListInputField(newTemplatePosition) {
     cy.wait(3000);
-    cy.get("react-select-3-input").clear().type("Doing").type('{enter}');
-
+    cy.findByTestId("move-card-popover-select-list-destination").click().type(newTemplatePosition);
 }
 
   confirmMoveButton() {
