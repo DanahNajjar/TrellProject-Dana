@@ -10,12 +10,12 @@ class moveTemplateToAnyListActions {
   }
 
   clickOnMoveButton() {
-    cy.findByTestId("card-back-move-card-button").click({force: true});
+    cy.findByTestId("card-back-move-card-button").click();
   }
 
   typesDoingInListInputField() {
     cy.wait(3000);
-    cy.get("#react-select-3-live-region").clear().type("Doing").type('{enter}');
+    cy.get("#react-select-3-input").clear().type("Doing").type('{enter}');
 
 }
 
