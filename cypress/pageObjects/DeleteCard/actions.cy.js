@@ -1,6 +1,8 @@
 class deleteCardActions{
      openBoard(boardUrl){
-        cy.visit(boardUrl) 
+        cy.visit(boardUrl)
+        cy.wait(3000)
+        cy.screenshot({capture:"fullPage"})
         return this;
      }
      clickOnExistingCard(){

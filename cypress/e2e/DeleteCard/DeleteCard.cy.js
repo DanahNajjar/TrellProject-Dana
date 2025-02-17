@@ -37,7 +37,6 @@ before(() => {
 
 Given("The user navigate to the board",()=>{
     deleteCardAction.openBoard(boardUrl)
-
 })
 
 When("Click on existing card",()=>{

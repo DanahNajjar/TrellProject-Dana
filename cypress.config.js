@@ -6,6 +6,7 @@ module.exports = defineConfig({
   baseUrl:"http://trello.com/",
   failOnStatusCode: false,
   chromeWebSecurity:false,
+  screenshotsFolder:"SCREENSHOOTFOLDER",
   setupNodeEvents(on, config) {
     on("file:preprocessor", cucumber());
   },
