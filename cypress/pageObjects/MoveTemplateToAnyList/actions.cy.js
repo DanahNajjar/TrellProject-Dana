@@ -6,21 +6,25 @@ class moveTemplateToAnyListActions {
 
   clickOnExistingCard() {
     cy.wait(3000)
-    cy.findByTestId("card-name").click();
+    cy.findByTestId("card-name").rightclick();
+    return this;
   }
 
   clickOnMoveButton() {
-    cy.findByTestId("card-back-move-card-button").click();
+    cy.findByTestId("quick-card-editor-move").click();
+    return this;
   }
 
   typesDoingInListInputField(newTemplatePosition) {
     cy.wait(3000);
     cy.findByTestId("move-card-popover-select-list-destination").click().type(newTemplatePosition +'{downArrow}'+'{enter}');
     cy.wait(3000);
+    return this;
 }
 
   confirmMoveButton() {
-    cy.findByTestId("move-card-popover-move-button").click();
+    cy.findByTestId("move-card-popover-move-button").dbclick();
+    return this;
   }
 }
 
