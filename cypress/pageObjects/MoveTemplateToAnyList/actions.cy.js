@@ -5,7 +5,7 @@ class moveTemplateToAnyListActions {
   }
 
   clickOnExistingCard() {
-    cy.wait(3000)
+    cy.wait(6000)
     cy.findByTestId("card-name").rightclick();
     return this;
   }
@@ -17,7 +17,7 @@ class moveTemplateToAnyListActions {
 
   typesDoingInListInputField(newTemplatePosition) {
     cy.wait(3000);
-    cy.findByTestId("move-card-popover-select-list-destination").click().type(newTemplatePosition +'{downArrow}'+'{enter}');
+    cy.findByTestId("move-card-popover-select-list-destination").click().type(newTemplatePosition +'{enter}');
     cy.wait(3000);
     return this;
 }

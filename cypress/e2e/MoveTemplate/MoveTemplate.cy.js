@@ -34,7 +34,7 @@ Given("The user navigates to the board", () => {
   moveTemplateToAnyListAction.openBoard(boardUrl);
 });
 
-When("The user clicks on an existing card", () => {
+When("The user clicks right click on an existing card", () => {
   moveTemplateToAnyListAction.clickOnExistingCard();
 });
 
@@ -42,7 +42,7 @@ When("The user clicks on Move button", () => {
   moveTemplateToAnyListAction.clickOnMoveButton();
 });
 
-When("The user clicks on List and types Doing in the list input field", () => {
+When("The user clicks on List and types Done in the list input field", () => {
   moveTemplateToAnyListAction.typesDoingInListInputField(newTemplatePosition);
 });
 
@@ -50,7 +50,7 @@ When("The user clicks on Move button", () => {
   moveTemplateToAnyListAction.confirmMoveButton();
 });
 
-Then("The card template moves to Doing List successfully", () => {
+Then("The card template moves to Done List successfully", () => {
   moveTemplateToAnyListAssertion.checkCardIsPresent(newTemplatePosition);
 });
 
